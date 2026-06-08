@@ -1,5 +1,4 @@
-<script>
-    function actualizarContadorCarrito() {
+function actualizarContadorCarrito() {
         const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
         const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
         const contadorSpan = document.getElementById('cart-count');
@@ -11,4 +10,3 @@
 
     // (Opcional) si quieres que se actualice cada vez que cambia el localStorage
     window.addEventListener('storage', actualizarContadorCarrito);
-</script>
