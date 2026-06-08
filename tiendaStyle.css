@@ -35,11 +35,27 @@ header {
     font-size: 2rem;
 }
 
-.menu-btn {
+.cart-icon {
+    text-decoration: none;      /* quita subrayado del enlace */
     background: none;
     border: none;
     font-size: 1.8rem;
     cursor: pointer;
+    color: #3e2a1f;             /* o el color que uses en el header */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+#cart-count {
+    font-size: 0.8rem;
+    background-color: #c46b3f;
+    color: white;
+    border-radius: 50%;
+    padding: 0.1rem 0.4rem;
+    min-width: 1.2rem;
+    text-align: center;
+    font-weight: bold;
 }
 
 /* ---------- BANNER ---------- */
@@ -165,3 +181,4 @@ footer {
         font-size: 0.8rem;
     }
 }
+
