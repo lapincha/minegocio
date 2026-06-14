@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let html = '';
     for (const [categoria, lista] of Object.entries(agrupado)) {
       let titulo = '';
-      if (categoria === 'gaming') titulo = '🎮 Gaming';
-      else if (categoria === 'samsung') titulo = '📱 Samsung';
-      else if (categoria === 'iphone') titulo = '🍏 iPhone';
+      if (categoria === 'redmagic') titulo = 'RedMagic';
+      else if (categoria === 'samsung') titulo = 'Samsung';
+      else if (categoria === 'iphone') titulo = 'iPhone';
       else titulo = categoria.toUpperCase();
 
       html += `<div class="brand-section">`;
