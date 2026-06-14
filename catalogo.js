@@ -2,15 +2,15 @@
 
 // Lista de productos (sin cambios)
 const productos = [
-  {
-    id: 1,
-    nombre: "iPhone 16 Pro Max",
-    imagen: "img/rm11.webp",
-    badge: "Tope de gama",
-    descripcion: "Pantalla Super Retina XDR de 6.9″, chip A18 Pro, cámara de 48MP con zoom óptico 5x, batería para todo el día y titanio de grado aeroespacial.",
-    precio: "$1199.99",
-    moneda: "USD"
-  }
+{
+id: 2,
+nombre: "RedMagic 11 Pro",
+imagen: "img/rm11.webp",
+badge: "Gaming extremo",
+descripcion: "Snapdragon 8 Gen 3, pantalla AMOLED de 144Hz, batería de 7000mAh con carga de 100W, refrigeración líquida y gatillos táctiles integrados.",
+precio: "$799.99",
+moneda: "USD"
+}
 ];
 
 // Referencias al DOM
