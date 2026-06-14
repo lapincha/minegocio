@@ -19,6 +19,15 @@ badge: "IA y productividad",
 descripcion: "Snapdragon 8 Gen 3, pantalla Dynamic AMOLED 2X de 6.8″ a 120Hz, cámara principal de 200MP con zoom óptico 5x y 10x, batería de 5000mAh, S Pen integrado y Galaxy AI.",
 precio: "$1199.99",
 moneda: "USD"
+},
+{
+id: 3,
+nombre: "iPhone 17 Pro Max",
+imagen: "img/iphone17pm.png",
+badge: "Próxima generación",
+descripcion: "Chip A19 Pro, pantalla Super Retina XDR de 6.9″ con ProMotion de 120Hz, sistema de cámaras de 48MP con zoom óptico 6x, batería de larga duración con carga rápida 35W, titanio rediseñado y iOS 19.",
+precio: "$1299.99",
+moneda: "USD"
 }
 ];
 
