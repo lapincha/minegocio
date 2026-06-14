@@ -49,7 +49,6 @@ if (nombre && imagen && descripcion && precioUSD) {
       const message = `Hola, me interesa comprar el *${nombre}*.
 Precio USD: ${precioUSD} ${monedaUSD}
 Precio MN: ${precioLocalFormateado} ${localCurrency}
-${badge || 'Producto'}
 
 Gracias.`;
       const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
