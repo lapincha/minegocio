@@ -10,6 +10,15 @@ badge: "Gaming extremo",
 descripcion: "Snapdragon 8 Gen 3, pantalla AMOLED de 144Hz, batería de 7000mAh con carga de 100W, refrigeración líquida y gatillos táctiles integrados.",
 precio: "$799.99",
 moneda: "USD"
+},
+{
+id: 2,
+nombre: "Samsung Galaxy S24 Ultra",
+imagen: "img/s24ultra.png",
+badge: "IA y productividad",
+descripcion: "Snapdragon 8 Gen 3, pantalla Dynamic AMOLED 2X de 6.8″ a 120Hz, cámara principal de 200MP con zoom óptico 5x y 10x, batería de 5000mAh, S Pen integrado y Galaxy AI.",
+precio: "$1199.99",
+moneda: "USD"
 }
 ];
 
