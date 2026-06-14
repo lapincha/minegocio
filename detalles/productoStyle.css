@@ -1,0 +1,165 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f2f4f8;
+  font-family: system-ui, 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Tarjeta completa con grid de 2 columnas */
+.card {
+  max-width: 800px;
+  width: 100%;
+  background: white;
+  border-radius: 28px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  transition: transform 0.2s ease;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Columna izquierda: imagen */
+.card-image {
+  background: linear-gradient(145deg, #d9e2ec, #cbd5e1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 280px;
+  text-align: center;
+}
+
+.card-image img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.card-image span {
+  font-size: 5rem;
+  display: block;
+}
+
+/* Columna derecha: contenido centrado */
+.card-content {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  text-align: center;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #1e293b;
+  line-height: 1.2;
+  text-align: center;
+  width: 100%;
+}
+
+.card-badge {
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.8rem;
+  border-radius: 30px;
+  display: inline-block;
+  width: fit-content;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.card-description {
+  color: #334155;
+  line-height: 1.5;
+  margin: 0.25rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+.card-price {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.card-price small {
+  font-size: 0.85rem;
+  font-weight: normal;
+  color: #475569;
+}
+
+.card-button {
+  background: #0f172a;
+  border: none;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  border-radius: 40px;
+  cursor: pointer;
+  width: fit-content;
+  margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background 0.2s, transform 0.1s;
+  text-align: center;
+}
+
+.card-button:hover {
+  background: #1e293b;
+  transform: scale(0.96);
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #1e293b;
+  padding: 2rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid #0f172a;
+}
+
+/* Responsive: en móviles apilar a 1 columna */
+@media (max-width: 600px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+  .card-image {
+    padding: 1.5rem;
+    min-height: 200px;
+  }
+  .card-content {
+    padding: 1.5rem;
+  }
+}
