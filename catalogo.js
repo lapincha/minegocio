@@ -1,51 +1,82 @@
-// catalogo.js con búsqueda funcional
+// catalogo.js - versión simple con separadores
 
-// Lista de productos (sin cambios)
 const productos = [
-{
-id: 1,
-nombre: "RedMagic 11 Pro",
-imagen: "img/rm11.webp",
-badge: "Gaming extremo",
-descripcion: "Snapdragon 8 Gen 3, pantalla AMOLED de 144Hz, batería de 7000mAh con carga de 100W, refrigeración líquida y gatillos táctiles integrados.",
-precio: "$799.99",
-moneda: "USD"
-},
-{
-id: 2,
-nombre: "Samsung Galaxy S24 Ultra",
-imagen: "img/s24ultra.png",
-badge: "IA y productividad",
-descripcion: "Snapdragon 8 Gen 3, pantalla Dynamic AMOLED 2X de 6.8″ a 120Hz, cámara principal de 200MP con zoom óptico 5x y 10x, batería de 5000mAh, S Pen integrado y Galaxy AI.",
-precio: "$1199.99",
-moneda: "USD"
-},
-{
-id: 3,
-nombre: "iPhone 17 Pro Max",
-imagen: "img/iphone17pm.png",
-badge: "Próxima generación",
-descripcion: "Chip A19 Pro, pantalla Super Retina XDR de 6.9″ con ProMotion de 120Hz, sistema de cámaras de 48MP con zoom óptico 6x, batería de larga duración con carga rápida 35W, titanio rediseñado y iOS 19.",
-precio: "$1299.99",
-moneda: "USD"
-}
+  {
+    id: 1,
+    nombre: "RedMagic 11 Pro",
+    imagen: "img/rm11.webp",
+    badge: "Gaming extremo",
+    descripcion: "Snapdragon 8 Gen 3, pantalla AMOLED de 144Hz...",
+    precio: "$799.99",
+    moneda: "USD"
+  },
+  {
+    id: 2,
+    nombre: "Samsung Galaxy S24 Ultra",
+    imagen: "img/s24ultra.png",
+    badge: "IA y productividad",
+    descripcion: "Snapdragon 8 Gen 3, pantalla Dynamic AMOLED...",
+    precio: "$1199.99",
+    moneda: "USD"
+  },
+  {
+    id: 3,
+    nombre: "iPhone 16 Pro Max",
+    imagen: "img/iphone16.png",
+    badge: "Tope de gama",
+    descripcion: "Pantalla 6.9″, chip A18 Pro...",
+    precio: "$1199.99",
+    moneda: "USD"
+  }
 ];
 
-// Referencias al DOM
 const grid = document.getElementById('productsGrid');
 const searchInput = document.getElementById('searchInput');
 const searchButton = document.getElementById('searchButton');
 
-// Función para renderizar las tarjetas según un array de productos
 function renderizarProductos(productosAMostrar) {
-  grid.innerHTML = ''; // Limpiar grid
-
+  if (!grid) return;
+  grid.innerHTML = '';
+  
   if (productosAMostrar.length === 0) {
     grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 2rem;">No se encontraron productos</div>';
     return;
   }
-
+  
+  // Variable para saber si ya mostramos el título de RedMagic
+  let mostradoRedMagic = false;
+  let mostradoSamsung = false;
+  let mostradoApple = false;
+  
   productosAMostrar.forEach(prod => {
+    // Mostrar título "RedMagic" antes de sus productos
+    if (prod.nombre.includes('RedMagic') && !mostradoRedMagic) {
+      const titulo = document.createElement('h2');
+      titulo.className = 'brand-separator';
+      titulo.textContent = '🔥 RedMagic';
+      grid.appendChild(titulo);
+      mostradoRedMagic = true;
+    }
+    
+    // Mostrar título "Samsung" antes de sus productos
+    if (prod.nombre.includes('Samsung') && !mostradoSamsung) {
+      const titulo = document.createElement('h2');
+      titulo.className = 'brand-separator';
+      titulo.textContent = '📱 Samsung';
+      grid.appendChild(titulo);
+      mostradoSamsung = true;
+    }
+    
+    // Mostrar título "iPhone" o "Apple" antes de sus productos
+    if (prod.nombre.includes('iPhone') && !mostradoApple) {
+      const titulo = document.createElement('h2');
+      titulo.className = 'brand-separator';
+      titulo.textContent = '🍎 Apple';
+      grid.appendChild(titulo);
+      mostradoApple = true;
+    }
+    
+    // Crear la tarjeta
     const card = document.createElement('div');
     card.className = 'product-card';
     card.addEventListener('click', () => {
@@ -67,11 +98,10 @@ function renderizarProductos(productosAMostrar) {
   });
 }
 
-// Función para filtrar productos por texto de búsqueda
+// Función para filtrar productos
 function filtrarProductos(texto) {
   const textoLower = texto.toLowerCase().trim();
   if (textoLower === '') {
-    // Si la búsqueda está vacía, mostrar todos
     renderizarProductos(productos);
   } else {
     const filtrados = productos.filter(prod =>
@@ -81,7 +111,7 @@ function filtrarProductos(texto) {
   }
 }
 
-// Eventos: al escribir en el input o hacer clic en el botón
+// Eventos
 if (searchInput) {
   searchInput.addEventListener('input', (e) => {
     filtrarProductos(e.target.value);
@@ -93,5 +123,5 @@ if (searchButton) {
   });
 }
 
-// Render inicial: mostrar todos los productos
+// Render inicial
 renderizarProductos(productos);
