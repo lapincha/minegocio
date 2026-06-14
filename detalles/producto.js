@@ -1,65 +1,80 @@
 /**
  * producto.js
- * Lee los parámetros de la URL y construye la tarjeta de detalle
+ * Muestra la tarjeta de detalle con precio en USD y moneda local (CUP)
+ * Tasa de cambio editable fácilmente
  */
 
-// Leer parámetros de la URL
 const params = new URLSearchParams(window.location.search);
 const nombre = params.get('nombre');
 let imagen = params.get('imagen');
 const badge = params.get('badge');
 const descripcion = params.get('descripcion');
-const precio = params.get('precio');
-const moneda = params.get('moneda');
+const precioUSD = params.get('precio');      // Ej: "$799.99"
+const monedaUSD = params.get('moneda');      // "USD"
 
 const container = document.getElementById('productContainer');
 
-// ========== CORRECCIÓN DE RUTA DE LA IMAGEN ==========
-// Si la imagen viene como "img/iphone16.png" (ruta relativa desde la raíz)
-// y estamos en la carpeta "detalles/", hay que subir un nivel: "../img/iphone16.png"
-if (imagen && !imagen.startsWith('http') && !imagen.startsWith('https') && !imagen.startsWith('/')) {
+// ========== CONFIGURACIÓN EDITABLE ==========
+// Cambia este valor según la tasa de cambio actual
+const exchangeRate = 655;           // 1 USD = 655 CUP
+const localCurrency = "CUP";        // Moneda nacional
+// ===========================================
+
+// Convertir precio USD a número (eliminar $ y espacios)
+const precioUSDNumerico = parseFloat(precioUSD.replace(/[^0-9.]/g, ''));
+const precioLocalNumerico = precioUSDNumerico * exchangeRate;
+
+// Formatear precios (sin decimales si son enteros, o con 2 decimales)
+const precioLocalFormateado = precioLocalNumerico.toLocaleString('es-ES', {
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 2
+});
+
+// Ajustar ruta de imagen
+if (imagen && !imagen.startsWith('http') && !imagen.startsWith('/')) {
   imagen = '../' + imagen;
 }
 
-// Depuración: ver en consola la ruta final (útil para encontrar errores)
-console.log('Producto:', nombre);
-console.log('Ruta de imagen:', imagen);
-
-if (nombre && imagen && descripcion && precio) {
-  // Construir la tarjeta completa
+if (nombre && imagen && descripcion && precioUSD) {
   container.innerHTML = `
     <div class="card-image">
-      <img src="${imagen}" alt="${nombre}" onerror="this.src='https://placehold.co/400x400?text=Imagen+no+disponible'">
+      <img src="${imagen}" alt="${nombre}">
     </div>
     <div class="card-content">
       <div class="card-badge">${badge || 'Destacado'}</div>
       <h2 class="card-title">${nombre}</h2>
       <p class="card-description">${descripcion}</p>
       <div class="card-price">
-        ${precio} <small>${moneda || 'USD'}</small>
+        <span>${precioUSD} ${monedaUSD}</span>
+        <span style="display:block; font-size:1.2rem; margin-top:5px; color:#0369a1;">
+          ${precioLocalFormateado} ${localCurrency}
+        </span>
       </div>
       <button class="card-button" id="buyButton">Comprar ahora →</button>
     </div>
   `;
-  
-  // Evento del botón comprar
+
   const buyButton = document.getElementById('buyButton');
   if (buyButton) {
     buyButton.addEventListener('click', () => {
-      alert(`✨ Añadiste ${nombre} al carrito`);
+      const phoneNumber = '5359638868';
+      const message = `Hola, me interesa comprar el *${nombre}*.
+Precio USD: ${precioUSD} ${monedaUSD}
+Precio MN: ${precioLocalFormateado} ${localCurrency}
+${badge || 'Producto'}
+
+Gracias.`;
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
     });
   }
 } else {
-  // Mostrar error si faltan datos
   container.innerHTML = `
     <div class="card-image"><span>⚠️</span></div>
     <div class="card-content">
-      <h2 class="card-title">Error al cargar el producto</h2>
-      <p class="card-description">No se recibieron todos los datos necesarios.</p>
-      <p class="card-description" style="font-size: 0.8rem; color: #666; margin-top: 0.5rem;">
-        Parámetros recibidos: ${window.location.search || '(ninguno)'}
-      </p>
-      <a href="../index.html" class="back-link" style="color: #0f172a; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 1rem;">← Volver al catálogo</a>
+      <h2 class="card-title">Error</h2>
+      <p class="card-description">No se recibieron datos del producto.</p>
+      <a href="../index.html" class="back-link">← Volver al catálogo</a>
     </div>
   `;
 }
