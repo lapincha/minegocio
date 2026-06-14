@@ -1,36 +1,24 @@
-/**
- * producto.js
- * Muestra la tarjeta de detalle con precio en USD y moneda local (CUP)
- * Tasa de cambio editable fácilmente
- */
-
 const params = new URLSearchParams(window.location.search);
 const nombre = params.get('nombre');
 let imagen = params.get('imagen');
 const badge = params.get('badge');
 const descripcion = params.get('descripcion');
-const precioUSD = params.get('precio');      // Ej: "$799.99"
-const monedaUSD = params.get('moneda');      // "USD"
+const precioUSD = params.get('precio');
+const monedaUSD = params.get('moneda');
 
 const container = document.getElementById('productContainer');
 
-// ========== CONFIGURACIÓN EDITABLE ==========
-// Cambia este valor según la tasa de cambio actual
-const exchangeRate = 655;           // 1 USD = 655 CUP
-const localCurrency = "CUP";        // Moneda nacional
-// ===========================================
+const exchangeRate = 655;
+const localCurrency = "CUP";
 
-// Convertir precio USD a número (eliminar $ y espacios)
 const precioUSDNumerico = parseFloat(precioUSD.replace(/[^0-9.]/g, ''));
 const precioLocalNumerico = precioUSDNumerico * exchangeRate;
-
-// Formatear precios (sin decimales si son enteros, o con 2 decimales)
 const precioLocalFormateado = precioLocalNumerico.toLocaleString('es-ES', {
   minimumFractionDigits: 0,
   maximumFractionDigits: 2
 });
 
-// Ajustar ruta de imagen
+// Ajuste de ruta porque estamos en /detalles/ y las imágenes están en /img/
 if (imagen && !imagen.startsWith('http') && !imagen.startsWith('/')) {
   imagen = '../' + imagen;
 }
