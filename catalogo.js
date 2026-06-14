@@ -22,7 +22,7 @@ const productos = [
   {
     id: 3,
     nombre: "iPhone 16 Pro Max",
-    imagen: "img/iphone16.png",
+    imagen: "img/iphone17pm.png",
     badge: "Tope de gama",
     descripcion: "Pantalla 6.9″, chip A18 Pro...",
     precio: "$1199.99",
