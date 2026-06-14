@@ -1,53 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Mi tienda de dulces</title>
-    <link rel="stylesheet" href="tiendaStyle.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo - Productos</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <p class="logo-text">🍩</p>
-        <div class="logo">Mi Negocio</div>
-        
-        <a href="carrito.html" class="cart-icon">
-    🛒 <span id="cart-count">0</span>
-        </a>
-        
-    </header>
+    
+    <header class="search-header">
+        <h2 class="business-name">Tienda de Teléfonos</h2>
+  <div class="search-container">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Buscar productos...">
+    </div>
+  </div>
+</header>
+    
+  <!--  <div class="container">
+    <h1>🎧 Nuestros productos</h1>-->
+    <div class="products-grid" id="productsGrid"></div>
+  </div>
+  
+  <!-- FOOTER -->
+  <!-- ========== FOOTER ========== -->
+<footer class="main-footer">
+  <div class="footer-container">
+    <!-- Columna 1: Información de la tienda -->
+    <div class="footer-col">
+      <h4>Tienda de Teléfonos</h4>
+      <p></p>
+    </div>
 
-    <main>
-        <section class="banner">
-            <h2>Mi negocio</h2>
-            <p>Información General</p>
-        </section>
+    <!-- Columna 2: Enlaces rápidos -->
+    <div class="footer-col">
+      <h4>Enlaces rápidos</h4>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
 
-        <section class="productos">
-            <h2>Más vendidos</h2>
-            <div class="grid-tarjetas">
-                
-                <!-- Tarjeta 1 -->       
-                <article class="tarjeta" data-id="1" data-name="dona-glaseada" data-price="35">
-                    <img src="img/dona.jpg" alt="Dona glaseada">
-                    <h3>Dona glaseada</h3>
-                    <p class="precio">$35</p>
-                    <button class="btn-agregar">+ Agregar</button>
-                </article>
+    <!-- Columna 3: Ayuda -->
+    <div class="footer-col">
+      <h4>Ayuda</h4>
+      <ul>
+        <li><a href="#">Preguntas frecuentes</a></li>
+        <li><a href="#">¿ Quieres una web para tu negocio ?</a></li>
+      </ul>
+    </div>
 
-                <article class="tarjeta" data-id="2" data-name="dona-chocolate" data-price="50">
-                    <img src="img/dona.jpg" alt="Dona glaseada">
-                    <h3>Dona de Chocolate</h3>
-                    <p class="precio">$50</p>
-                    <button class="btn-agregar">+ Agregar</button>
-                </article>
-                
-            </div>
-        </section>
-    </main>
+    <!-- Columna 4: Redes sociales -->
+    <div class="footer-col">
+      <h4>Síguenos</h4>
+      <div class="social-links">
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 MiTienda. Todos los derechos reservados.</p>
+  </div>
+</footer>
 
-    <footer>
-        <p>Desarrollador: +53 59638868</p>
-    </footer>
+  <!-- JavaScript externo -->
+  <script src="js/catalogo.js"></script>
 </body>
 </html>
