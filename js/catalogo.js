@@ -5,7 +5,7 @@ const productos = [
   {
     id: 1,
     nombre: "iPhone 16 Pro Max",
-    imagen: "https://images.pexels.com/photos/699122/iphone-11-phone-call-apple-699122.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+    imagen: "../img/s24.jpg",
     badge: "Tope de gama",
     descripcion: "Pantalla Super Retina XDR de 6.9″, chip A18 Pro, cámara de 48MP con zoom óptico 5x, batería para todo el día y titanio de grado aeroespacial.",
     precio: "$1,199.99",
