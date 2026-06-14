@@ -3,7 +3,7 @@
 // Lista de productos (sin cambios)
 const productos = [
 {
-id: 2,
+id: 1,
 nombre: "RedMagic 11 Pro",
 imagen: "img/rm11.webp",
 badge: "Gaming extremo",
