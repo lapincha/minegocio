@@ -53,7 +53,7 @@ function renderizarProductos(productosAMostrar) {
     if (prod.nombre.includes('RedMagic') && !mostradoRedMagic) {
       const titulo = document.createElement('h2');
       titulo.className = 'brand-separator';
-      titulo.textContent = '🔥 RedMagic';
+      titulo.textContent = 'RedMagic';
       grid.appendChild(titulo);
       mostradoRedMagic = true;
     }
@@ -62,7 +62,7 @@ function renderizarProductos(productosAMostrar) {
     if (prod.nombre.includes('Samsung') && !mostradoSamsung) {
       const titulo = document.createElement('h2');
       titulo.className = 'brand-separator';
-      titulo.textContent = '📱 Samsung';
+      titulo.textContent = 'Samsung';
       grid.appendChild(titulo);
       mostradoSamsung = true;
     }
@@ -71,7 +71,7 @@ function renderizarProductos(productosAMostrar) {
     if (prod.nombre.includes('iPhone') && !mostradoApple) {
       const titulo = document.createElement('h2');
       titulo.className = 'brand-separator';
-      titulo.textContent = '🍎 Apple';
+      titulo.textContent = 'Apple';
       grid.appendChild(titulo);
       mostradoApple = true;
     }
