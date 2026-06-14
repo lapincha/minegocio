@@ -23,7 +23,7 @@ const productos = [
   {
     id: 3,
     nombre: "Xiaomi 14 Ultra",
-    imagen: "https://images.pexels.com/photos/4108567/xiaomi-mi-9-t-phone-4108567.jpg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+    imagen: "/s24.jpg",
     badge: "Leica Edition",
     descripcion: "Pantalla AMOLED de 6.73″ 120Hz, Snapdragon 8 Gen 3, sistema de cámara Leica de 4x50MP, batería de 5000mAh y carga rápida de 90W.",
     precio: "$1,099.99",
