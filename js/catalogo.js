@@ -14,7 +14,7 @@ const productos = [
   {
     id: 2,
     nombre: "Samsung Galaxy S24 Ultra",
-    imagen: "https://images.pexels.com/photos/4042140/samsung-galaxy-fold-foldable-smartphone-4042140.jpg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+    imagen: "https://pngdownloads.wordpress.com/2024/01/20/galaxy-s24-ultra-violet-png/",
     badge: "Inteligencia IA",
     descripcion: "Pantalla Dynamic AMOLED 2X de 6.8″, Snapdragon 8 Gen 3, S Pen integrado, cámara de 200MP con zoom 100x y Galaxy AI.",
     precio: "$1,299.99",
