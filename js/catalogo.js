@@ -14,7 +14,7 @@ const productos = [
   {
     id: 2,
     nombre: "Samsung Galaxy S24 Ultra",
-    imagen: "",
+    imagen: "img/rm11.webp",
     badge: "Inteligencia IA",
     descripcion: "Pantalla Dynamic AMOLED 2X de 6.8″, Snapdragon 8 Gen 3, S Pen integrado, cámara de 200MP con zoom 100x y Galaxy AI.",
     precio: "$1,299.99",
@@ -23,7 +23,7 @@ const productos = [
   {
     id: 3,
     nombre: "Xiaomi 14 Ultra",
-    imagen: "",
+    imagen: "img/rm11.webp",
     badge: "Leica Edition",
     descripcion: "Pantalla AMOLED de 6.73″ 120Hz, Snapdragon 8 Gen 3, sistema de cámara Leica de 4x50MP, batería de 5000mAh y carga rápida de 90W.",
     precio: "$1,099.99",
