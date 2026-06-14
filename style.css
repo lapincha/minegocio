@@ -229,3 +229,51 @@ body {
     justify-content: center;
   }
 }
+
+/* ========== SECCIONES POR MARCA ========== */
+.brand-section {
+  margin-bottom: 3rem;
+}
+
+.brand-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #0369a1;
+  display: inline-block;
+  letter-spacing: -0.5px;
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Separador de marcas */
+.brand-separator {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 2rem 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #0369a1;
+  grid-column: 1 / -1;  /* Ocupa todo el ancho del grid */
+}
+
+/* El primer separador no necesita margen superior tan grande */
+.brand-separator:first-of-type {
+  margin-top: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .brand-title {
+    font-size: 1.4rem;
+  }
+  .brand-grid {
+    gap: 12px;
+  }
+  }
