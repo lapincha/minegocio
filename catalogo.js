@@ -1,8 +1,6 @@
 const productos = [
   // ========== GAMING ==========
-  { id: 1, categoria: "redmagic", nombre: "RedMagic 11 Pro", imagen: "img/rm11.webp", badge: "Gaming extremo", descripcion: "Snapdragon 8 Gen 3, pantalla AMOLED de 144Hz, batería de 7000mAh con carga de 100W, refrigeración líquida y gatillos táctiles.", precio: "$799.99", moneda: "USD" },
-  { id: 2, categoria: "redmagic", nombre: "RedMagic 11 Pro", imagen: "img/rm11.webp", badge: "Gaming extremo", descripcion: "Snapdragon 8 Gen 2, pantalla AMOLED de 120Hz, batería de 6500mAh, carga de 80W y gatillos táctiles.", precio: "$699.99", moneda: "USD" },
-
+  { id: 1, categoria: "dulces", nombre: "Dona Glaseada", imagen: "img/dona.jpg", badge: "Esponjosa y dulce", descripcion: "Dona cubierta con glaseado brillante de fresa y chispas de colores, masa suave y aireada.", precio: "$1.99", moneda: "USD" },
   // ========== SAMSUNG ==========
   { id: 1, categoria: "samsung", nombre: "Samsung Galaxy S24 Ultra", imagen: "img/s24ultra.png", badge: "IA y productividad", descripcion: "Snapdragon 8 Gen 3, pantalla Dynamic AMOLED 2X de 6.8″ a 120Hz, cámara de 200MP, S Pen y Galaxy AI.", precio: "$1199.99", moneda: "USD" },
   { id: 2, categoria: "samsung", nombre: "Samsung Galaxy S24+", imagen: "img/s24ultra.png", badge: "IA y productividad", descripcion: "Snapdragon 8 Gen 3, pantalla de 6.7″ a 120Hz, cámara de 50MP, batería de 4900mAh.", precio: "$999.99", moneda: "USD" },
