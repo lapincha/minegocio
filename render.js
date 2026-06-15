@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let html = '';
     for (const [categoria, lista] of Object.entries(agrupado)) {
       let titulo = '';
-      if (categoria === 'redmagic') titulo = 'RedMagic';
+      if (categoria === 'dulces') titulo = 'Dulces';
       else if (categoria === 'samsung') titulo = 'Samsung';
       else if (categoria === 'iphone') titulo = 'iPhone';
       else titulo = categoria.toUpperCase();
