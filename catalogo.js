@@ -13,7 +13,7 @@ const productos = [
   id: 2, 
   categoria: "dulces", 
   nombre: "Cupcake de Vainilla y Chispas", 
-  imagen: "img/Cupcake de Vainilla y Chispas.jpeg", 
+  imagen: "img/Cupcacke de Vainilla y Chispas.jpeg", 
   badge: "Más vendido", 
   descripcion: "Suave bizcocho de vainilla tradicional con un espectacular copete de crema batida y coloridas chispas de dulce.", 
   precio: "$2.50", 
