@@ -1,6 +1,14 @@
 const productos = [
   // ========== DULCES ==========
-  { id: 1, categoria: "dulces", nombre: "Dona Glaseada", imagen: "img/dona.jpg", badge: "Esponjosa y dulce", descripcion: "Dona cubierta con glaseado brillante de fresa y chispas de colores, masa suave y aireada.", precio: "$1.99", moneda: "USD" }
+  { id: 1, 
+   categoria: "dulces", 
+   nombre: "Dona Glaseada", 
+   imagen: "img/dona.jpg", 
+   badge: "Esponjosa y dulce", 
+   descripcion: "Dona cubierta con glaseado brillante de fresa y chispas de colores, masa suave y aireada.", 
+   precio: "$1.99", 
+   moneda: "USD" 
+  },
   { 
   id: 2, 
   categoria: "dulces", 
@@ -21,8 +29,6 @@ const productos = [
   precio: "$4.50", 
   moneda: "USD" 
 }
-    
-  
   
   // ========== SAMSUNG ==========
   
