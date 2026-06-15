@@ -21,9 +21,9 @@ const productos = [
   },
   { 
   id: 3, 
-  categoria: "reposteria", 
+  categoria: "dulces", 
   nombre: "Galletas con Chispas de Chocolate", 
-  imagen: "img/Galletas con Chispas de Chocolate.jpeg", 
+  imagen: "img/Galletas con Chispas de chocolate.jpeg", 
   badge: "Artesanales", 
   descripcion: "Clásicas y deliciosas galletas caseras, horneadas a la perfección con una textura crujiente y cargadas de abundantes chispas de chocolate.", 
   precio: "$4.50", 
